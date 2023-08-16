@@ -4,21 +4,20 @@ import java.util.Optional;
 
 public class OptionalFail1 {
 
-    public static final String USER_STATUS = "UNKNOWN";
+  public static final String USER_STATUS = "UNKNOWN";
 
-    public String findUserStatus(long id) {
+  public String findUserStatus(long id) {
 
-        Optional<String> status = findById(id);
+    Optional<String> status = findById(id);
 
-        if (status.isPresent()) {
-            return status.get();
-        } else {
-            return USER_STATUS;
-        }
+    if (status.isPresent()) {
+      return status.get();
+    } else {
+      return USER_STATUS;
     }
+  }
 
-    private Optional<String> findById(long id) {
-        return Optional.empty();
-    }
-
+  private Optional<String> findById(long id) {
+    return Optional.empty();
+  }
 }

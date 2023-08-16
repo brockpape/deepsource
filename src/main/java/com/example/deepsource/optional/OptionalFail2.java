@@ -5,13 +5,12 @@ import java.util.Optional;
 
 public class OptionalFail2 {
 
-    public Optional<List<String>> fetchItems() {
-        List<String> items = getItems();
-        return Optional.of(items);
-    }
+  public Optional<List<String>> fetchItems() {
+    List<String> items = getItems();
+    return Optional.of(items);
+  }
 
-    private List<String> getItems() {
-        return List.of("1", "2");
-    }
-
+  private List<String> getItems() {
+    return List.of("1", "2");
+  }
 }
